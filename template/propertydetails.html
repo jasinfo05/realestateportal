@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property units</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+        }
+
+        button {
+            display: inline-block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            font-size: 13px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #009688;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Units</h1>
+
+    {% if property_units %}
+        <ul>
+            {% for unit in property_units %}
+            <li>
+                <p><strong>Type:</strong> {{ unit.type }}</p>
+                <p><strong>Rent Cost:</strong> {{ unit.rent_cost }}</p>
+                <a href="{% url 'tenantdetails' %}?id={{ unit.id }}"><button>TENANT</button></a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No Units Available</p>
+    {% endif %}
+
+</body>
+</html>

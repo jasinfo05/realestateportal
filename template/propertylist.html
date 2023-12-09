@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+        }
+
+        button {
+            display: inline-block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            font-size: 13px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #009688;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            {% for property in properties %}
+            <li>
+                <p>PROPERTY NAME : {{property.name}}</p>
+                <P>ADDRESS : {{property.address}}</P>
+                <P>LOCATION : {{property.location}}</P>
+                <P>FEATURES : {{property.features}}</P>
+                <a href="{% url 'propertydetails' %}?id={{ property.id }}"><button>VIEW UNITS</button></a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+</body>
+</html>

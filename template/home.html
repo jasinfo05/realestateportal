@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome!</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+        }
+
+        h1 {
+            margin-top: 50px;
+            color: #009688;
+        }
+
+        p {
+            color: #009688;
+        }
+
+        button {
+            display: inline-block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #009688;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Hey...you're welcome to LAND PORTAL</h1>
+    <a href="{% url 'propertylist' %}"><button>VIEW PROPERTY LIST</button>
+    </a>
+    <p>Discover your dream properties with ease at Land Portal...</p>
+</body>
+</html>
